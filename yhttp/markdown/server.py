@@ -11,7 +11,7 @@ from .markdown import markdowner
 
 
 here = os.path.dirname(__file__)
-app = y.Application(version=__version__)
+app = y.Application(__version__, 'yhttp-markdown')
 cfg = app.settings
 
 

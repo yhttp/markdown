@@ -24,7 +24,9 @@ def cliapp():
 
 @pytest.fixture
 def yapp():
-    return y.Application()
+    from yhttp.markdown import __version__
+
+    return y.Application(__version__, 'yhttp-markdown')
 
 
 @pytest.fixture
