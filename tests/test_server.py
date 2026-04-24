@@ -1,4 +1,4 @@
-from bddrest import status, response, when
+from bddrest import status, response
 
 from yhttp.markdown import __version__
 
