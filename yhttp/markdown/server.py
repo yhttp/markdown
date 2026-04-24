@@ -205,12 +205,12 @@ def ready(app):
     app.route('/(.*)')(get)
 
 
-@app.when
-def shutdown(app):
-    app.delete_route(
-        cfg.metadata.baseurl.replace('.', r'\.') + '/(.*)',
-        'get'
-    )
-
-    app.delete_route(r'/static/(.*)', 'get')
-    app.delete_route('/(.*)', 'get')
+# @app.when
+# def shutdown(app):
+#     app.delete_route(
+#         cfg.metadata.baseurl.replace('.', r'\.') + '/(.*)',
+#         'get'
+#     )
+#
+#     app.delete_route(r'/static/(.*)', 'get')
+#     app.delete_route('/(.*)', 'get')

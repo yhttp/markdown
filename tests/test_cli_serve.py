@@ -10,8 +10,8 @@ from .conftest import GITHUBACTIONS
     GITHUBACTIONS,
     reason='no way of testing this by GH currently, due the Github actions bug'
 )
-def test_cli_serve(cliapp, freetcpport, mockupfs):
-    root = mockupfs(**{
+def test_cli_serve(cliapp, freetcpport, mktmptree):
+    root = mktmptree({
         'bar': {
             'index.md': '# bar index',
         },

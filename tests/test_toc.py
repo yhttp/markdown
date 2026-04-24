@@ -1,8 +1,8 @@
 from yhttp.markdown import toc
 
 
-def test_toc_extractdir(mockupfs):
-    root = mockupfs(**{
+def test_toc_extractdir(mktmptree):
+    root = mktmptree({
         'bar': {
             'index.md': '# bar index',
         },
