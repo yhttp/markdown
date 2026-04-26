@@ -20,7 +20,7 @@ def markdown2html(if_contenttype='text/markdown', cssfiles=None):
                 # Get the first chunk to for execute the handler
                 firstchunk = next(body)
 
-            if if_contenttype and resp.type != if_contenttype:
+            if if_contenttype and resp.contenttype != if_contenttype:
                 # ignore converting to html
                 if firstchunk is not None:
                     yield firstchunk
@@ -31,7 +31,7 @@ def markdown2html(if_contenttype='text/markdown', cssfiles=None):
                 return
 
             # Convert and serve the html
-            resp.type = 'text/html'
+            resp.contenttype = 'text/html'
             if firstchunk is not None:
                 chunks.append(markdowner.convert(firstchunk).encode())
                 for chunk in body:

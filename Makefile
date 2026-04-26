@@ -1,5 +1,6 @@
 PKG_NAMESPACE = yhttp.markdown
 PKG_NAME = yhttp-markdown
+VENV_NAME = yhttp
 PYTEST_FLAGS = -vv
 PYDEPS_COMMON = \
 	'coveralls' \
