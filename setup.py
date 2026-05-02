@@ -15,9 +15,7 @@ with open(
 
 
 dependencies = [
-    'yhttp >= 8.1.1, < 9',
-    'pymlconf',
-    'easycli',
+    'yhttp >= 9.0.1, < 10',
     'markdown2',
     'mako',
     'pygments',

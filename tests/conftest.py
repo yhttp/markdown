@@ -36,7 +36,7 @@ def yserver(yapp):
 def ymdapp():
     from yhttp.markdown.server import app
 
-    app.settings.merge('debug: true')
+    app.settings.debug = True
     yield app
     app.shutdown()
 

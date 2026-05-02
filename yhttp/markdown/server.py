@@ -16,7 +16,7 @@ cfg = app.settings
 
 
 # Builtin configuration
-cfg.merge('''
+cfg |= '''
 # yhttp debug flag
 debug: false
 
@@ -50,7 +50,7 @@ metadata:
 # syntaxt highlighting theme
 highlight:
     theme: monokai
-''')
+'''
 
 
 def sasscompile(s):
